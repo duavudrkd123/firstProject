@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class LongFloatExample {
 public static void main(String[] args) {
-	System.out.println(Integer.MAX_VALUE);
+	System.out.println("최대값: " + Integer.MAX_VALUE);
 	long l1 = 214748364L;
 	
 	float f1 = 0.1234519872948712984F;

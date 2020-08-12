@@ -12,10 +12,11 @@ public class WhileExample2 {
 			while(run) {
 			keyCode =System.in.read();
 			if(keyCode == 57)
-				break;
+			break;
 			if(keyCode!=13 && keyCode!=10) {
 				System.out.println(keyCode);
 				System.out.println("키를 누르세요.");
+			
 			} 
 //			System.out.println("num: " + num);
 //			if(num-- == 0)

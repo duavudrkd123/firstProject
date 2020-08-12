@@ -1,3 +1,4 @@
+package com.yedam.rotto;
 //package com.yedam.cond;
 //
 //public class Rotto {

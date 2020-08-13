@@ -1,18 +1,18 @@
-package com.yedam.Lotto;
+package com.yedam.Note;
 
-public class Lotto {
+public class Lotto2 {
 	public static void main(String[] args) {
-		int num1 =0, num2 = 0, num3 =0, num4 =0, num5 =0, num6 =0, num7 =0; //뽑힌 숫자
+		int num1 =0, num2 = 0, num3 =0, num4 =0, num5 =0, num6 =0; //뽑힌 숫자
 		num1 = (int) (Math.random() * 45) + 1;
 				System.out.println(num1);
-		boolean AA = true;
+		boolean AA = true; //반복구문 시작
 		while (AA) {
 		num2 = (int) (Math.random() * 45) + 1;
 			if (num2 != num1) {
 				System.out.println(num2);
 				AA = false;
 			}
-		}//end of while
+		}//end of while(반복구문 끝)
 		AA = true;
 		while (AA) {
 		num3 = (int) (Math.random() * 45) + 1;

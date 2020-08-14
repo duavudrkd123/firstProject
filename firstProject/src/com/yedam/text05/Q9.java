@@ -36,8 +36,7 @@ public class Q9 {
 				for(int i = 0; i <scores.length; i++) {
 					System.out.println("scores[" + i + "]: " + scores[i]);
 				}
-				System.out.println("아무키나 입력하면 처음으로 돌아갑니다");
-				int A = scanner.nextInt();
+				
 			} else if(selectNo ==4) { 
 				for(int i =0; i < scores.length; i++) {
 						if(max < scores[i]) {

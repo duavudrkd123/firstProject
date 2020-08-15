@@ -4,93 +4,73 @@ import java.util.Scanner;
 
 public class Address {
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		String a = null;
-		int b=0, c=0;
+		Friend[] FriA = null;
+//		Friend F1 = new Friend(); //??????????????????????
+		Scanner Scan = new Scanner(System.in);
+		boolean run = true;
 		
-//			System.out.print("이름을 입력하세요> ");
-//			a = scanner.nextLine();
-//			System.out.print("나이를 입력하세요> ");
-//			b = scanner.nextInt();
-//			System.out.print("전화번호를 입력하세요> ");
-//			c = scanner.nextInt();
-//			Friend F1 = new Friend(a, b, c);
-//			
-//			System.out.print("이름을 입력하세요> ");
-//			a = scanner.nextLine();
-//			a = scanner.nextLine();
-//			System.out.print("나이를 입력하세요> ");
-//			b = scanner.nextInt();
-//			System.out.print("전화번호를 입력하세요> ");
-//			c = scanner.nextInt();
-//			Friend F2 = new Friend(a, b, c);
-//			
-//			System.out.print("이름을 입력하세요> ");
-//			a = scanner.nextLine();
-//			a = scanner.nextLine();
-//			System.out.print("나이를 입력하세요> ");
-//			b = scanner.nextInt();
-//			System.out.print("전화번호를 입력하세요> ");
-//			c = scanner.nextInt();
-//			Friend F3 = new Friend(a, b, c);
-//			
-			
-			a = "가나";
-			b = 11;		
-			c = 1111;
-			Friend F1 = new Friend(a, b, c);			
-			a = "다라";			
-			b = 22;			
-			c = 2222;
-			Friend F2 = new Friend(a, b, c);			
-			a = "마바";			
-			b = 33;			
-			c = 3333;
-			Friend F3 = new Friend(a, b, c);
+		System.out.print("몇 명을 입력하시겠습니까?>");
+		int FNum = Scan.nextInt();
+		FriA = new Friend[FNum];
+		System.out.println(FNum + "명의 자료를 입력합니다.");
+		for(int a = 0; a < FriA.length; a++) {
+			Friend F1 = new Friend();
+			F1.setname("실험" + (a + 1));
+			F1.setage((int) (Math.random() * 45) + 1);
+			F1.setpNum("010" + F1.mkPN() + F1.mkPN() + F1.mkPN() + F1.mkPN() + F1.mkPN() + F1.mkPN() + F1.mkPN() + F1.mkPN());
+			FriA[a] = F1; 
+			System.out.println(FriA[a]);
+		}
+		
+		
+//		for(int a = 0; a < FriA.length; a++) {
+//			Friend F1 = new Friend(); //??????????????????
+//			System.out.println(a + 1 + "번의 자료입니다.");
+//			System.out.print("이름>");
+//			F1.setname(Scan.next());
+//			System.out.print("나이>");
+//			F1.setage(Scan.nextInt());
+//			System.out.print("번호>");
+//			F1.setpNum(Scan.next());
+//			FriA[a] = F1; 
+//			System.out.println(FriA[a]);
+//		}
+		System.out.println("입력한 자료를 확인합니다.");
+		for(int a=0; a<FriA.length; a++) {
+			System.out.println(a + 1 + "번: " + FriA[a]);
+		}
+		while(run) {
+			System.out.println("1.조회 2.조건 조회 3.조회 및 수정 9.종료");
+			int num = Scan.nextInt();
+			if(num == 1) {
+				System.out.println("입력한 자료를 확인합니다.");
+				for(int a=0; a<FriA.length; a++) {
+					System.out.println(a + 1 + "번: " + FriA[a]);
+				}
+			} else if(num == 2) {
+				System.out.println("조건에 맞는 자료만 조회합니다.");
+				System.out.print("찾고 싶은 이름>");
+				String search = Scan.next();
+				for(int a = 0; a < FriA.length; a ++) {
+					if(FriA[a].getname().equals(search)) {
+						System.out.println(FriA[a]);
+					}
+				}	
+			} else if(num == 3) {
+				System.out.print("수정할 대상을 입력하세요>");
+				String search = Scan.next();
+				for(int a = 0; a < FriA.length; a ++) {
+					if(FriA[a].getname().equals(search)) {
+						System.out.print("어떻게 바꿀까요?>");
+						FriA[a].setname(Scan.next());
+						System.out.println(FriA[a]);
+					}
+				}	
+			} else if(num == 9) {
+				run = false;
+				System.out.println("종료합니다.");
+			}
+		}
 	
-			Friend[] sAry = {F1, F2, F3};
-			for (Friend f : sAry) {
-				System.out.println(f); 
-			}
-			String A = null; 
-//			System.out.print("찾고 싶은 이름을 입력하세요.>");
-//			A = scanner.nextLine();	
-			String searchName = A;
-//			
-//			for (Friend f : sAry) {
-//				if(f.getname().equals(searchName))	
-//				System.out.println(f); 
-//			}
-//			System.out.print(F1.name + "어떻게 바꾸시겠습니까?>");
-//			a = scanner.nextLine();
-//			F1.setname(a);
-//			System.out.println("수정한 이름: " + F1.name);
-			
-			System.out.print("원래 이름을 입력하세요.>");
-			A = scanner.nextLine();
-			searchName = A;
-			System.out.print("수정할 이름을 입력하세요.>");
-			String B = scanner.nextLine();
-//			System.out.println(A);
-			if (F1.name.equalsIgnoreCase(A))  {
-//				System.out.println("실행했습니다.");
-				a = B;
-				b = 11;		
-				c = 1111;
-				F1 = new Friend(a, b, c);	
-			} else {
-//				System.out.println("틀리다는데여");
-			}
-			
-			sAry[0] = F1;
-			sAry[1] = F2;
-			sAry[2] = F3;
-			
-			System.out.println("수정완료");
-			for(Friend f : sAry) {
-//				if(f.getname().equals(B))	
-				System.out.println(f); 
-			}
-			
 	}
 }

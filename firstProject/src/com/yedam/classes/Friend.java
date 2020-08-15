@@ -13,9 +13,6 @@ public class Friend {
 		this.age = age;
 		this.pNum = pNum;
 	}
-	public Friend(String name) {
-		this.name = name;
-	}
 	//메소드
 	public void setname(String name) {
 		this.name =name;
@@ -38,6 +35,14 @@ public class Friend {
 	@Override
 	public String toString() {
 		return "이름: " + name + ", 나이: " + age + ", 전화번호: " + pNum;
+	}
+	
+	public int mkPN() {
+		int A = 0;
+		for (int a = 0; a<8; a++) {
+			A = (int)(Math.random() * 10);
+		}
+	return A;
 	}
 	
 }

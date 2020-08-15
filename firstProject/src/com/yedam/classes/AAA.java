@@ -23,28 +23,25 @@ public class AAA {
 			if (selectNo == 1) {
 				System.out.println("친구 수를 입력하세요> ");
 				friendNum = scanner.nextInt();
-				scanner.nextLine();
 				System.out.println("친구 수에 " + friendNum + "가 입력되었습니다");
 				Fri = new Friend[friendNum];
 				for (int i = 0; i < Fri.length; i++) {
 					Friend F1 = new Friend("", 0, "");
 					System.out.print("이름");
 					F1.setname(scanner.nextLine());
+					scanner.nextLine();//엔터키 제거
 					System.out.print("나이");
 					F1.setage(scanner.nextInt());
-					scanner.nextLine();
 					System.out.print("번호");
 					F1.setpNum(scanner.nextLine());
+					scanner.nextLine();
 					Fri[i] = F1;
 				}
 			} else if (selectNo == 2) {
-
-				System.out.println("리스트");
-
+				System.out.println("입력된 리스트를 출력합니다.");
 				for (int i = 0; i < Fri.length; i++) {
 					System.out.println(Fri[i].toString());
 				}
-
 			} else if (selectNo == 3) {
 				System.out.println("조회할 이름을 입력하시오.");
 				scanner.nextLine();

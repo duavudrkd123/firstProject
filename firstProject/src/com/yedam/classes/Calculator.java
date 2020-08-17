@@ -1,8 +1,8 @@
 package com.yedam.classes;
 
 public class Calculator {
-	double pi = 3.14;
-	
+	static double pi = 3.14; //static을 붙이면 new로 인스턴스를 안 만들어도 클래스 이름으로 메소드 호출 가능
+	// -> Calculator.메서드 로 메서드 사용가능
 	public int add(int x, int y) {
 		int sum = 0;
 		sum = x + y;
@@ -15,6 +15,10 @@ public class Calculator {
 	
 	//원 넓이 구하는 메서드
 	public void getArea(int a) { //a는 반지름
+		double result = pi * a * a;
+		System.out.println("반지름 " + a + "인 원의 넓이는 " + result);
+	}
+	public void getArea(double a) { //a는 반지름
 		double result = pi * a * a;
 		System.out.println("반지름 " + a + "인 원의 넓이는 " + result);
 	}

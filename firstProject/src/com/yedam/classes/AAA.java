@@ -9,6 +9,7 @@ public class AAA {
 		boolean run = true;
 		int friendNum = 0;
 		Friend[] Fri = null;
+//		Friend F1 = new Friend("", 0, "");
 
 		Scanner scanner = new Scanner(System.in);
 

@@ -4,7 +4,7 @@ public class PersonExample {
 	public static void main(String[] args) {
 		
 		Person p1 = new Person(); //p1.을 치면 Person class를 사용할 거임
-		System.out.println("초기값 : " + p1.introduce());//초기화 안 하면 오류난다
+		System.out.println("초기값 : " + p1.introduce());//초기화 안 하면 오류난다 
 		p1.setName("김상민");
 		//Person class의 setName 객체를 매개변수 "김상민"으로 사용한다
 		//name필드에 "김상민"을 저장

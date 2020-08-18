@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Address {
 	public static void main(String[] args) {
-		Friend[] FriA = null;
+		Friend3[] FriA = null;
 //		Friend F1 = new Friend(); // -> X
 //인스턴스의 위치값을 참조하기 때문에 매번 다른 인스턴스를 생성해 줘야한다!
 		Scanner Scan = new Scanner(System.in);
@@ -12,10 +12,10 @@ public class Address {
 		
 		System.out.print("몇 명을 입력하시겠습니까?>");
 		int FNum = Scan.nextInt();
-		FriA = new Friend[FNum];
+		FriA = new Friend3[FNum];
 		System.out.println(FNum + "명의 자료를 입력합니다.");
 		for(int a = 0; a < FriA.length; a++) {
-			Friend F1 = new Friend();//??????????????????????-> 인스턴스 생성
+			Friend3 F1 = new Friend3();//??????????????????????-> 인스턴스 생성
 			//인스턴스의 위치값을 참조하기 때문에 매번 다른 인스턴스를 생성해 줘야한다!
 			F1.setname("실험" + (a + 1));
 			F1.setage((int) (Math.random() * 45) + 1);

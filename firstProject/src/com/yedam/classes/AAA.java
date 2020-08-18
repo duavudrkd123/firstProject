@@ -8,7 +8,7 @@ public class AAA {
 	public static void main(String[] args) {
 		boolean run = true;
 		int friendNum = 0;
-		Friend[] Fri = null;
+		Friend3[] Fri = null;
 //		Friend F1 = new Friend("", 0, "");
 
 		Scanner scanner = new Scanner(System.in);
@@ -25,9 +25,9 @@ public class AAA {
 				System.out.println("친구 수를 입력하세요> ");
 				friendNum = scanner.nextInt();
 				System.out.println("친구 수에 " + friendNum + "가 입력되었습니다");
-				Fri = new Friend[friendNum];
+				Fri = new Friend3[friendNum];
 				for (int i = 0; i < Fri.length; i++) {
-					Friend F1 = new Friend("", 0, "");
+					Friend3 F1 = new Friend3("", 0, "");
 					System.out.print("이름");
 					F1.setname(scanner.nextLine());
 					scanner.nextLine();//엔터키 제거

@@ -1,14 +1,14 @@
 package com.yedam.classes;
 
-public class Friend {
+public class Friend3 {
 	
 	String name = "";
 	int age = 0;
 	String pNum="";
 	//기본생성자
-	public Friend() {
+	public Friend3() {
 	}
-	public Friend(String name, int age, String pNum) {
+	public Friend3(String name, int age, String pNum) {
 		this.name = name;
 		this.age = age;
 		this.pNum = pNum;

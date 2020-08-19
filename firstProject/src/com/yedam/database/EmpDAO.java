@@ -7,9 +7,10 @@ import java.sql.SQLException;
 
 public class EmpDAO {
 	//수정
-	public void UpEmp(Employee emp, int a) {
+	public void UpEmp(Employee emp) {
 		Connection conn = DBConnection.getConnection();
-		String sql = "UPDATE EMP_TEMP SET  salary = " + a + " WHERE EMPLOYEE_ID = " + emp.getEmployeeId();
+		String sql = "UPDATE EMP_TEMP SET  salary = " + emp.getSalary() + 
+							" WHERE EMPLOYEE_ID = " + emp.getEmployeeId();
 		System.out.println(sql);
 		try {
 			PreparedStatement psmt = conn.prepareStatement(sql);
@@ -20,9 +21,9 @@ public class EmpDAO {
 		}
 	}
 	//삭제
-	public void removeEmp(int eId) {
+	public void removeEmp(int empId) {
 		Connection conn = DBConnection.getConnection(); 
-		String sql = "DELETE FROM EMP_TEMP WHERE EMPLOYEE_ID = " + eId;
+		String sql = "DELETE FROM EMP_TEMP WHERE EMPLOYEE_ID = " + empId;
 		System.out.println(sql);
 		try {
 			PreparedStatement psmt = conn.prepareStatement(sql);

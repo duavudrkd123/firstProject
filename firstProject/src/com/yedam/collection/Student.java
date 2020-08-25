@@ -1,10 +1,12 @@
 package com.yedam.collection;
 
-public class Student {
+import java.util.Comparator;
+
+public class Student implements Comparable <Student> {//Student를 기준으로 대소를 정한다
 	private String name;
 	private int mathScore;
 	private int engScore;
-	
+
 	public Student(String name, int mathScore, int engScore) {
 		super();
 		this.name = name;
@@ -35,4 +37,16 @@ public class Student {
 	public void setEngScore(int engScore) {
 		this.engScore = engScore;
 	}
+
+	@Override
+	public int compareTo(Student o) {
+		return (this.mathScore + this.engScore)  - (o.mathScore+o.engScore);
+		
+//		if((this.mathScore + this.engScore)  < (o.mathScore+o.engScore))
+//			return -1;
+//		else
+//			return 1;
+	}
+
+
 }

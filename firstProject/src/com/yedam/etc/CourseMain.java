@@ -9,7 +9,6 @@ public class CourseMain {
 		Course course = new Course(null, 0); 
 		Student stu = new Student("",0,0);
 		Course arrayCourse[] = new Course[10];
-		int sum = 0;
 		while( run) {
 			System.out.println("------------------------------------------");
 			System.out.println("1.과정등록 2.학생등록 3.과정정보확인 4. 종료");
@@ -78,6 +77,7 @@ public class CourseMain {
 				}
 				int stuNum = 0;
 				int high = 0;
+				int sum = 0;
 				for(int i =0; i < arrayCourse[num].stu.length; i++) {
 					if(arrayCourse[num].getStudent(i) != null) {
 						sum = sum + arrayCourse[num].getStudent(i).getscore();
